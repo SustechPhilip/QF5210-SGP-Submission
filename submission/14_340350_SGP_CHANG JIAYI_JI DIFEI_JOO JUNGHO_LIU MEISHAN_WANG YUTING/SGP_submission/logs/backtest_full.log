@@ -1,0 +1,120 @@
+ANN = 260.4（交易日 1650，2020-06-15 ~ 2026-10-16）
+
+单因子外推完成 1.4s
+训练段外推 Sharpe 前 12:
+B4_RVDN          0.669
+B3_SEG_NOON      0.514
+C9_ATR14         0.301
+B7_UDVOL         0.299
+B3_SEG_AM        0.289
+B9_LOWT          0.285
+B4_RV            0.201
+E5_DAYNIGHT      0.160
+A1_MOM_20        0.158
+B8_PVCORR        0.156
+A2_MOMVWAP_20    0.127
+B9_HIGHT         0.067
+训练段外推 Sharpe > 0 的因子数: 15 / 65
+（披露用）全样本外推 Sharpe > 0 的因子数: 31 / 65
+
+loose 筛选入选 3 个因子
+RFE 保留: ['B4_RVDN', 'B3_SEG_NOON', 'E5_DAYNIGHT']
+因子登记表已回填：进入主模型 3 个 / 65 个
+
+首个可预测日: 2021-06-07
+训练段内预测天数: 410
+
+--- ols_exp ---
+segment   n    cagr  ann_vol  sharpe  max_dd  calmar  win_rate  ann_turnover
+  train 410  0.0615   0.0675  0.9177 -0.0588  1.0449    0.5122      105.6122
+  valid 259 -0.0569   0.0657 -0.8573 -0.0689 -0.8258    0.4556      109.1580
+   test 726 -0.0053   0.0840 -0.0212 -0.1684 -0.0317    0.5179      107.2301
+
+--- buyhold ---
+segment   n    cagr  ann_vol  sharpe  max_dd  calmar  win_rate  ann_turnover
+  train 664 -0.0110   0.1740  0.0234 -0.3001 -0.0367    0.4819        0.3922
+  valid 259 -0.0161   0.1494 -0.0338 -0.1384 -0.1164    0.4981        0.0000
+   test 726  0.2292   0.1738  1.2753 -0.1784  1.2845    0.5730        0.0000
+
+--- long_vt ---
+segment   n    cagr  ann_vol  sharpe  max_dd  calmar  win_rate  ann_turnover
+  train 664  0.0011   0.1068  0.0637 -0.1943  0.0056    0.4819        2.4445
+  valid 259 -0.0265   0.1020 -0.2122 -0.1012 -0.2619    0.4981        2.1626
+   test 726  0.1114   0.1142  0.9827 -0.1175  0.9486    0.5730        2.4525
+
+--- mom20 ---
+segment   n    cagr  ann_vol  sharpe  max_dd  calmar  win_rate  ann_turnover
+  train 644 -0.0889   0.1041 -0.8420 -0.2666 -0.3334    0.4705       33.6437
+  valid 259 -0.1002   0.1021 -0.9830 -0.1254 -0.7994    0.4710       57.4398
+   test 724  0.0029   0.1146  0.0824 -0.1703  0.0172    0.4890       43.5486
+
+--- buyhold_test_rebased ---
+segment   n  cagr  ann_vol  sharpe  max_dd  calmar  win_rate  ann_turnover
+  train 664 0.000   0.0000     NaN  0.0000     NaN     0.000        0.0000
+  valid 259 0.000   0.0000     NaN  0.0000     NaN     0.000        0.0000
+   test 726 0.229   0.1738  1.2744 -0.1784  1.2835     0.573        0.3582
+
+=== 事后改进版：降换手（不替换主结果）===
+
+--- ema_smoothed ---
+segment   n   cagr  ann_vol  sharpe  max_dd  calmar  win_rate  ann_turnover
+  train 410 0.0683   0.0735  0.9362 -0.0576  1.1858    0.5366       49.9011
+  valid 259 0.0672   0.0872  0.7886 -0.0562  1.1958    0.4826       41.0142
+   test 726 0.0422   0.0891  0.5092 -0.1579  0.2676    0.5083       41.5021
+
+半衰期网格（披露；选择只用验证期）：
+method  halflife  scale_k  valid_sharpe  valid_cagr  valid_turnover  test_sharpe  test_cagr  test_turnover  selected
+  none       0.0   1.0000       -0.8573     -0.0569        109.1580      -0.0212    -0.0053       107.2301     False
+   ema       1.0   1.6233        0.2080      0.0135         62.3267       0.3280     0.0244        62.2259     False
+   ema       2.0   2.1496        0.7886      0.0672         41.0142       0.5092     0.0422        41.5021      True
+   ema       3.0   2.5513        0.7398      0.0631         29.4410       0.4900     0.0425        32.3308     False
+   ema       5.0   3.2042        0.6177      0.0533         18.0746       0.3881     0.0338        23.4598     False
+   ema       7.0   3.7635        0.4552      0.0393         12.9174       0.1870     0.0138        18.7034     False
+   ema      10.0   4.5102        0.3038      0.0255          8.1647      -0.0599    -0.0113        14.4263     False
+
+仓位规则变体（同一信号，只改仓位规则）：
+                  name  valid_sharpe  test_sharpe  valid_turnover  test_turnover
+             main(不平滑)       -0.8573      -0.0212        109.1580       107.2301
+            ema(半衰期2日)        0.7886       0.5092         41.0142        41.5021
+         每周调仓（周内首个交易日）        0.6294       0.4096         25.2443        21.7474
+               不交易带0.4       -0.3146       0.0430         83.1866        81.4077
+只做多+半衰期3日(固定3日,非验证期选出)        0.7281       0.8281          6.1968        14.1747
+
+仓位统计（主结果，测试期）:
+{
+  "n": 727,
+  "sign_flips": 293,
+  "sign_flips_per_year": 104.9648824391688,
+  "pos_autocorr1": 0.27243714139216246,
+  "frac_absz_ge1": 0.2297111416781293
+}
+
+=== 稳健性 ===
+cost fee=0.0001: test Sharpe=0.106 CAGR=0.005
+cost fee=0.0002: test Sharpe=-0.021 CAGR=-0.005
+cost fee=0.0005: test Sharpe=-0.403 CAGR=-0.037
+ablation drop A: features=['B4_RVDN', 'B3_SEG_NOON', 'E5_DAYNIGHT'] test Sharpe=-0.021
+ablation drop B: features=['C9_ATR14', 'E5_DAYNIGHT', 'A1_MOM_1'] test Sharpe=-0.731
+ablation drop C: features=['B4_RVDN', 'B3_SEG_NOON', 'E5_DAYNIGHT'] test Sharpe=-0.021
+ablation drop D: features=['B4_RVDN', 'B3_SEG_NOON', 'E5_DAYNIGHT'] test Sharpe=-0.021
+ablation drop E: features=['B4_RVDN', 'B3_SEG_NOON', 'B8_PVCORR'] test Sharpe=0.116
+循环平移零假设: test null mean=-0.593 p95=0.320, 策略=-0.021, 分位=0.868 (单侧 p=0.132)
+alt_close y_C_1714: test Sharpe=-0.065
+alt_close y_C_vwap_1705_1714: test Sharpe=-0.076
+window expanding: test Sharpe=-0.021
+window 250: test Sharpe=-0.239
+ridge alpha=0.1: valid Sharpe=-0.857 test Sharpe=-0.021
+ridge alpha=1.0: valid Sharpe=-0.858 test Sharpe=-0.021
+ridge alpha=10.0: valid Sharpe=-0.867 test Sharpe=-0.020
+ridge alpha=100.0: valid Sharpe=-0.943 test Sharpe=-0.007
+anchor O_t 全量口径: features=['B4_RVDN', 'B3_SEG_NOON', 'B3_SEG_AM'] test Sharpe=-0.158
+换月检验: 到期日 77 天, 窗口内标签 308 条, 虚拟变量系数 -9.941 bp (se=6.680 bp, t=-1.49); 标签置 NaN 后 test Sharpe=0.634
+
+=== 改进版（EMA 平滑）稳健性 ===
+ema cost fee=0.0001: test Sharpe=0.556 CAGR=0.047
+ema cost fee=0.0002: test Sharpe=0.509 CAGR=0.042
+ema cost fee=0.0005: test Sharpe=0.369 CAGR=0.029
+ema 分年 Sharpe: {2021: 1.394, 2022: 0.697, 2023: 0.789, 2024: 1.654, 2025: -1.412, 2026: 2.065}
+ema 循环平移: null mean=-0.349 p95=0.512, 策略=0.509, 分位=0.949 (单侧 p=0.051)
+
+wrote metrics.csv / daily_backtest.csv / robustness.json to sgp_factors/out

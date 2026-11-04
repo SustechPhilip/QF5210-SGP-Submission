@@ -1,0 +1,8 @@
+# SGP 回测包依赖
+# 实测环境：Python 3.13 / pandas 3.0.5 / numpy 2.5.2 / scipy 1.18.0
+#
+# 注意：config.yaml 用 JSON 语法书写，由标准库 json 解析，
+# 因此**不需要 PyYAML**（JSON 是 YAML 1.2 的子集，yaml.safe_load 也能读）。
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10          # 仅推断检验用（sgp_factors/inference.py 的正态分布 CDF）

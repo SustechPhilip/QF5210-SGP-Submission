@@ -1,0 +1,25 @@
+ANN=260.4，因子 65 个，交易日 1650
+统一评估窗口左端点（最后一个因子开始出信号的日子）: 2021-05-19
+
+--- 基线(主结果口径) ---
+筛选入选 3 个，RFE 后 ['B4_RVDN', 'B3_SEG_NOON', 'E5_DAYNIGHT']
+不平滑: valid=-0.857 test=-0.021 (17.0s)
+EMA 平滑(半衰期2日): valid=0.789 test=0.509
+
+--- 去均值信号 ---
+筛选入选 4 个，RFE 后 ['B4_RVDN', 'B3_SEG_NOON', 'B5_KURT', 'B9_HIGHT']
+不平滑: valid=-1.599 test=-0.123 (15.4s)
+EMA 平滑(半衰期2日): valid=0.239 test=0.427
+
+--- 统一评估窗口 ---
+筛选入选 3 个，RFE 后 ['B4_RVDN', 'B3_SEG_NOON', 'E5_DAYNIGHT']
+不平滑: valid=-0.857 test=-0.021 (14.7s)
+EMA 平滑(半衰期2日): valid=0.789 test=0.509
+
+=== 汇总 ===
+  variant  n_screened  n_features  valid_sharpe  test_sharpe  valid_turnover  test_turnover  ema_valid_sharpe  ema_test_sharpe
+基线(主结果口径)           3           3       -0.8573      -0.0212        109.1580       107.2301            0.7886           0.5092
+    去均值信号           4           4       -1.5988      -0.1228        106.1208       104.1541            0.2394           0.4274
+   统一评估窗口           3           3       -0.8573      -0.0212        109.1580       107.2301            0.7886           0.5092
+
+wrote sgp_factors/out/screen_variants.csv

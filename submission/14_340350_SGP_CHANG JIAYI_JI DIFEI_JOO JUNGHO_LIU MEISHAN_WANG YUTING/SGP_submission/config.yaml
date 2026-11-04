@@ -1,0 +1,135 @@
+{
+  "_readme": "SGP（MSCI Singapore 股指期货）日频择时：唯一参数来源。本文件用 JSON 语法书写（JSON 是 YAML 1.2 的子集，yaml.safe_load 与 json.loads 均可解析）；所有模块一律从 config.py 读取，不各自硬编码常量。本文件与 config.py 位于**包根目录**，数据层 sgp_data 与因子层 sgp_factors 共用。",
+  "data": {
+    "csv": "data/SGP_2.csv",
+    "dir": "sgp_data/out",
+    "products": [
+      "SGP"
+    ]
+  },
+  "decision": {
+    "decision_ts": "17:00",
+    "factor_cutoff": "16:59",
+    "execution_price": "C_t",
+    "label": "y_cc",
+    "max_training_row_lag": 2
+  },
+  "split": {
+    "train_end": "2022-12-31",
+    "valid_start": "2023-01-01",
+    "valid_end": "2023-12-31",
+    "test_start": "2024-01-01",
+    "ann": "dynamic"
+  },
+  "cost": {
+    "fee": 0.0002,
+    "tick": 0.05,
+    "formula": "cost_t = |delta_pos_t| * (fee + tick / C_t)",
+    "fee_grid": [
+      0.0001,
+      0.0002,
+      0.0005
+    ]
+  },
+  "target_vol": 0.1,
+  "smoothing": {
+    "enabled": true,
+    "method": "ema_recursive",
+    "halflife_grid": [
+      1,
+      2,
+      3,
+      5,
+      7,
+      10
+    ],
+    "select_on": "valid",
+    "select_metric": "net_sharpe",
+    "scale_fit_end": "2022-12-31",
+    "chosen_halflife": 2.0,
+    "scale_k": 2.149587570637219,
+    "_note": "事后改进版（看过测试集结果之后才加），单列报告、不替换主结果。chosen_halflife 与 scale_k 由 select_halflife.py 按验证期规则选出后写回并冻结；回测与实盘(update.py)都只读这两个值，保证逐位一致。"
+  },
+  "model": {
+    "headline": {
+      "screen": "loose",
+      "window": "expanding",
+      "model": "ols",
+      "rfe": 10
+    },
+    "min_train": 250,
+    "min_train_screen": 120,
+    "rfe_keep": 10,
+    "window": "expanding",
+    "window_250": "robust",
+    "ridge_alphas": [
+      0.1,
+      1,
+      10,
+      100
+    ]
+  },
+  "screen": {
+    "method": "rolling_extrapolation",
+    "preset": "loose",
+    "sharpe_period": "train",
+    "presets": {
+      "loose": {
+        "sharpe": 0.0,
+        "corr": 0.2
+      },
+      "strict_S2": {
+        "sharpe": 0.8,
+        "corr": 0.2
+      },
+      "strict_S3": {
+        "sharpe": 0.5,
+        "corr": 0.3
+      }
+    }
+  },
+  "data_quality": {
+    "thin_day_rule": "决策窗内(<=16:59) bar 数 < thin_day_ratio * thin_day_expected_minutes；决策窗 08:30-16:59 固定 510 根，与交易规则时期无关，因此不使用 17:00 之后的信息",
+    "gap_min_minutes": 60,
+    "bad_day_rule": "thin_day OR data_gap -> 当日分钟数据不可靠",
+    "factor_mask_rule": {
+      "same_day_B": "当日坏掉 -> B 类（当日口径）置 NaN",
+      "prev_day_B": [
+        "B11_CLOSESETTLE",
+        "B12_TAIL15"
+      ],
+      "prev_day_B_rule": "前一日坏掉 -> 这些用 t-1 数据的因子置 NaN"
+    },
+    "asof_rule": "预测时用最近一次可用值（as-of）填充，主模型与筛选口径一致",
+    "thin_day_ratio": 0.85,
+    "thin_day_expected_minutes": 510,
+    "gap_rule": "日盘内连续无成交 >= gap_min_minutes 分钟；只用决策窗内(<=16:59)的 bar 判定"
+  },
+  "benchmarks": [
+    "buyhold",
+    "long_vt",
+    "mom20"
+  ],
+  "robust": {
+    "n_shift": 1000,
+    "seed": 20261028,
+    "expiry_window_trading_days": 4,
+    "expiry_window_note": "到期前 0-3 个交易日（含到期日共 4 个交易日）"
+  },
+  "perf": {
+    "min_n_for_annualized": 60,
+    "note": "n < 60 时年化指标输出 N/A，改报区间值"
+  },
+  "freeze": {
+    "date": "2026-10-16",
+    "note": "冻结日 = 改进版参数确定时能看到的最后一个交易日。该日之后追加的数据对主结果与改进版都是真样本外；该日及之前的数据都已在样本里（测试段尤其如此）。两个版本的参数此后不再改动。"
+  },
+  "deferred": [
+    "xgb_reg",
+    "xgb_clf",
+    "gp_F",
+    "window750",
+    "scheme2_run",
+    "cat_equal"
+  ]
+}

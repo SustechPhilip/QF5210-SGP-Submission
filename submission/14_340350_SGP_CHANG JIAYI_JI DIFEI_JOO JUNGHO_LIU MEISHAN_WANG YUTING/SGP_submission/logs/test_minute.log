@@ -1,0 +1,13 @@
+build_decision shape: (22, 30)
+  m_skew     notna=  22/22
+  m_kurt     notna=  22/22
+  vm1        notna=  22/22
+  vm2        notna=  22/22
+  vm3        notna=  22/22
+  vm4        notna=  22/22
+  pv_corr    notna=  22/22
+  m_skew     min=-0.1185 max=0.151 std=0.07414
+  m_kurt     min=-0.2626 max=0.4229 std=0.1755
+  vm3        min=0.8437 max=1.956 std=0.3267
+  vm4        min=0.8735 max=10.32 std=2.48
+PASS: 7 个因子全部修复

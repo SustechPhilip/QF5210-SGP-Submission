@@ -1,0 +1,8 @@
+asof=2026-10-16，交易日 1650，ANN=260.4
+入选特征（训练段重跑，固定）: ['B4_RVDN', 'B3_SEG_NOON', 'E5_DAYNIGHT']
+EMA 状态校验：状态文件里没有可比对的历史交易日（首次运行）
+wrote sgp_factors/out/state_ema.json
+wrote sgp_factors/out/positions_asof_2026-10-16.csv
+wrote sgp_factors/out/perf_asof_2026-10-16.csv
+测试期 [main_ols_exp] Sharpe=-0.021 CAGR=-0.005
+测试期 [ema_halflife_2] Sharpe=0.509 CAGR=0.042

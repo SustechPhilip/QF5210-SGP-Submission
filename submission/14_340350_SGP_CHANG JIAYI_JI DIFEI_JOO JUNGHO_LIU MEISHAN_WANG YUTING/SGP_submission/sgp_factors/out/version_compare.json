@@ -1,0 +1,42 @@
+[
+  {
+    "variant": "original",
+    "features": [
+      "B7_UDVOL",
+      "B3_SEG_NOON",
+      "C9_ATR14"
+    ],
+    "valid_sharpe": -1.1212608529392531,
+    "test_sharpe": -0.1329910418401312,
+    "test_cagr": -0.015126570867148414,
+    "test_max_dd": -0.15332996344270122,
+    "n_valid": 259,
+    "n_test": 726
+  },
+  {
+    "variant": "b7_only",
+    "features": [
+      "B4_RVDN",
+      "B3_SEG_NOON",
+      "B8_PVCORR"
+    ],
+    "valid_sharpe": 0.03261096921102847,
+    "test_sharpe": 0.10350608522066462,
+    "test_cagr": 0.005157633157777619,
+    "test_max_dd": -0.1342503173736802,
+    "n_valid": 259,
+    "n_test": 726
+  },
+  {
+    "variant": "fixed",
+    "features": [
+      "B4_RVDN",
+      "B3_SEG_NOON",
+      "E5_DAYNIGHT"
+    ],
+    "valid_sharpe": -0.8573250929836276,
+    "test_sharpe": -0.021236928607580672,
+    "test_cagr": -0.0053423671752016455,
+    "test_max_dd": -0.1684379669111441
+  }
+]

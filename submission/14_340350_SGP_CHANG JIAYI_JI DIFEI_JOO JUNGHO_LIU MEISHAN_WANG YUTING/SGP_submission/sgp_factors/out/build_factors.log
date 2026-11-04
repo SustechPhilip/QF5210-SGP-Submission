@@ -1,0 +1,17 @@
+loaded in 0.9s
+factors built in 6.4s, shape=(1650, 65)
+类别因子数: {'B': 26, 'C': 18, 'A': 13, 'E': 5, 'D': 3}
+  A: n=13 类别 first_valid=2020-11-30
+  B: n=26 类别 first_valid=2020-06-16
+  C: n=18 类别 first_valid=2020-11-27
+  D: n=3 类别 first_valid=2020-11-27
+  E: n=5 类别 first_valid=2020-06-16
+全部因子同时可用的起点: 2020-11-30
+wrote sgp_factors/out/factors.csv and sgp_factors/out/factor_registry.csv
+
+训练段各因子 |Spearman| 中位数 vs 其他:
+  A: 0.224 (min 0.179)
+  B: 0.083 (min 0.022)
+  C: 0.239 (min 0.073)
+  D: 0.139 (min 0.017)
+  E: 0.057 (min 0.043)

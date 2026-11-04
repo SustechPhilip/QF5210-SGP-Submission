@@ -1,0 +1,186 @@
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:181: IOError: sysctlbyname failed for 'hw.l1dcachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:181: IOError: sysctlbyname failed for 'hw.l2cachesize'. Detail: [errno 1] Operation not permitted
+/Users/runner/work/crossbow/crossbow/arrow/cpp/src/arrow/util/cpu_info.cc:181: IOError: sysctlbyname failed for 'hw.l3cachesize'. Detail: [errno 1] Operation not permitted
+ANN=260.4，因子 65 个，交易日 1650
+demean=0 fit=expanding eval=all: screen=3 feats=['B4_RVDN', 'B3_SEG_NOON', 'E5_DAYNIGHT'] valid=-0.8573 test=-0.0212
+demean=0 fit=expanding eval=150: screen=4 feats=['B4_RV', 'B3_SEG_NOON', 'B1_TAIL_10', 'C7_J'] valid=0.2607 test=-0.3164
+demean=0 fit=expanding eval=200: screen=4 feats=['B4_RVDN', 'B1_TAIL_10', 'B8_PVCORR', 'B3_SEG_NOON'] valid=0.3414 test=-0.2725
+demean=0 fit=expanding eval=250: screen=2 feats=['B4_RVDN', 'B8_PVCORR'] valid=0.8604 test=-0.1494
+demean=0 fit=expanding eval=300: screen=2 feats=['B4_RVDN', 'B3_SEG_NOON'] valid=-0.5298 test=-0.0171
+demean=0 fit=expanding eval=350: screen=2 feats=['B4_RVDN', 'B3_SEG_NOON'] valid=-0.5298 test=-0.0171
+demean=0 fit=expanding eval=450: screen=2 feats=['B4_RVDN', 'B3_SEG_NOON'] valid=-0.5298 test=-0.0171
+  (fit=expanding 用时 107.6s)
+demean=0 fit=rolling100 eval=all: screen=0 feats=[] valid=-3.4608 test=0.4546
+demean=0 fit=rolling100 eval=150: screen=0 feats=[] valid=-3.4608 test=0.4546
+demean=0 fit=rolling100 eval=200: screen=0 feats=[] valid=-3.4608 test=0.4546
+demean=0 fit=rolling100 eval=250: screen=0 feats=[] valid=-3.4608 test=0.4546
+demean=0 fit=rolling100 eval=300: screen=0 feats=[] valid=-3.4608 test=0.4546
+demean=0 fit=rolling100 eval=350: screen=0 feats=[] valid=-3.4608 test=0.4546
+demean=0 fit=rolling100 eval=450: screen=0 feats=[] valid=-3.4608 test=0.4546
+  (fit=rolling100 用时 30.4s)
+demean=0 fit=rolling130 eval=all: screen=9 feats=['C2_DEA', 'B3_SEG_AM', 'B1_TAIL_10', 'B3_SEG_NOON', 'B12_TAIL15', 'D3_TURNCHG', 'B5_KURT', 'C3_HIST', 'B10_TAILVOL'] valid=-1.5493 test=-0.3959
+demean=0 fit=rolling130 eval=150: screen=5 feats=['B12_TAIL15', 'B4_RVUP', 'B3_SEG_PM', 'B3_SEG_NOON', 'B3_SEG_AM'] valid=-0.7948 test=-0.1066
+demean=0 fit=rolling130 eval=200: screen=9 feats=['B12_TAIL15', 'B4_RVUP', 'B1_TAIL_10', 'B3_SEG_NOON', 'B10_TAILVOL', 'E4_GAP', 'B3_SEG_AM', 'D3_TURNCHG', 'C3_HIST'] valid=-0.3945 test=-0.2813
+demean=0 fit=rolling130 eval=250: screen=8 feats=['C2_DEA', 'B12_TAIL15', 'B3_SEG_PM', 'B3_SEG_NOON', 'D3_TURNCHG', 'B8_PVCORR', 'B10_TAILVOL', 'C3_HIST'] valid=0.4072 test=0.0125
+demean=0 fit=rolling130 eval=300: screen=6 feats=['C2_DEA', 'B12_TAIL15', 'B1_TAIL_10', 'B3_SEG_NOON', 'B8_PVCORR', 'D3_TURNCHG'] valid=0.6243 test=-0.0200
+demean=0 fit=rolling130 eval=350: screen=7 feats=['C2_DEA', 'B1_TAIL_10', 'B12_TAIL15', 'B3_SEG_NOON', 'B8_PVCORR', 'D3_TURNCHG', 'A1_MOM_5'] valid=0.4250 test=0.0529
+demean=0 fit=rolling130 eval=450: screen=6 feats=['C2_DEA', 'B3_SEG_AM', 'B1_TAIL_10', 'B12_TAIL15', 'B3_SEG_NOON', 'D3_TURNCHG'] valid=-0.9748 test=-0.2108
+  (fit=rolling130 用时 108.4s)
+demean=0 fit=rolling160 eval=all: screen=9 feats=['C2_DEA', 'B1_TAIL_10', 'B12_TAIL15', 'E5_DAYNIGHT', 'B3_SEG_NOON', 'D3_TURNCHG', 'A2_MOMVWAP_5', 'B5_KURT', 'B10_TAILVOL'] valid=-1.9271 test=-0.2999
+demean=0 fit=rolling160 eval=150: screen=6 feats=['B4_RVDN', 'B12_TAIL15', 'B1_TAIL_10', 'E4_GAP', 'B3_SEG_NOON', 'B3_SEG_OPEN30'] valid=-0.3156 test=-0.1156
+demean=0 fit=rolling160 eval=200: screen=8 feats=['B12_TAIL15', 'B4_RVDN', 'B1_TAIL_10', 'B10_TAILVOL', 'B3_SEG_NOON', 'B3_SEG_OPEN30', 'E4_GAP', 'C3_HIST'] valid=0.1941 test=-0.1928
+demean=0 fit=rolling160 eval=250: screen=6 feats=['C2_DEA', 'B1_TAIL_10', 'B12_TAIL15', 'B10_TAILVOL', 'C3_HIST', 'D3_TURNCHG'] valid=0.9187 test=-0.7890
+demean=0 fit=rolling160 eval=300: screen=6 feats=['C2_DEA', 'B12_TAIL15', 'B1_TAIL_10', 'B8_PVCORR', 'B10_TAILVOL', 'D3_TURNCHG'] valid=1.3283 test=-0.4278
+demean=0 fit=rolling160 eval=350: screen=8 feats=['C2_DEA', 'B1_TAIL_10', 'B12_TAIL15', 'B10_TAILVOL', 'B8_PVCORR', 'B3_SEG_NOON', 'D3_TURNCHG', 'A2_MOMVWAP_5'] valid=0.3660 test=-0.0432
+demean=0 fit=rolling160 eval=450: screen=8 feats=['C2_DEA', 'B12_TAIL15', 'B1_TAIL_10', 'E5_DAYNIGHT', 'D3_TURNCHG', 'B10_TAILVOL', 'A2_MOMVWAP_5', 'B3_SEG_NOON'] valid=-1.0342 test=-0.1798
+  (fit=rolling160 用时 107.7s)
+demean=0 fit=rolling190 eval=all: screen=9 feats=['A1_MOM_1', 'C2_DEA', 'E5_DAYNIGHT', 'D3_TURNCHG', 'B12_TAIL15', 'B5_KURT', 'B3_SEG_NOON', 'B10_TAILVOL', 'E4_GAP'] valid=-1.8551 test=-0.1578
+demean=0 fit=rolling190 eval=150: screen=7 feats=['B1_TAIL_10', 'B12_TAIL15', 'C1_DIF', 'B9_HIGHT', 'B3_SEG_NOON', 'E4_GAP', 'D2_VOLCROW'] valid=-0.8351 test=0.1963
+demean=0 fit=rolling190 eval=200: screen=7 feats=['B12_TAIL15', 'A5_MMS', 'B1_TAIL_10', 'B3_SEG_OPEN30', 'E4_GAP', 'B3_SEG_NOON', 'B6_VMOM1'] valid=-1.1121 test=0.3453
+demean=0 fit=rolling190 eval=250: screen=8 feats=['C2_DEA', 'B12_TAIL15', 'E1_NRET', 'C3_HIST', 'D3_TURNCHG', 'B2_VDEV', 'B8_PVCORR', 'B5_KURT'] valid=-0.0715 test=-0.3606
+demean=0 fit=rolling190 eval=300: screen=4 feats=['C2_DEA', 'B12_TAIL15', 'B2_VDEV', 'D3_TURNCHG'] valid=0.8242 test=-0.2777
+demean=0 fit=rolling190 eval=350: screen=6 feats=['C2_DEA', 'B9_HIGHT', 'B12_TAIL15', 'B1_TAIL_10', 'D3_TURNCHG', 'B10_TAILVOL'] valid=0.0859 test=-0.8695
+demean=0 fit=rolling190 eval=450: screen=6 feats=['C2_DEA', 'A1_MOM_1', 'B12_TAIL15', 'E5_DAYNIGHT', 'D3_TURNCHG', 'B10_TAILVOL'] valid=-1.0911 test=-0.6253
+  (fit=rolling190 用时 114.9s)
+demean=0 fit=rolling210 eval=all: screen=8 feats=['C2_DEA', 'B9_HIGHT', 'B1_TAIL_10', 'B10_TAILVOL', 'D3_TURNCHG', 'B12_TAIL15', 'B5_KURT', 'B3_SEG_NOON'] valid=-1.3657 test=-0.4647
+demean=0 fit=rolling210 eval=150: screen=5 feats=['B12_TAIL15', 'C10_MADEV_5', 'C1_DIF', 'B3_SEG_NOON', 'E4_GAP'] valid=-0.4115 test=0.0357
+demean=0 fit=rolling210 eval=200: screen=9 feats=['B12_TAIL15', 'B4_RV', 'B1_TAIL_10', 'B10_TAILVOL', 'E4_GAP', 'C3_HIST', 'D3_TURNCHG', 'B3_SEG_OPEN30', 'B3_SEG_NOON'] valid=0.2108 test=-0.2937
+demean=0 fit=rolling210 eval=250: screen=7 feats=['C2_DEA', 'B12_TAIL15', 'B1_TAIL_10', 'D3_TURNCHG', 'B10_TAILVOL', 'B8_PVCORR', 'C3_HIST'] valid=1.1916 test=-0.5000
+demean=0 fit=rolling210 eval=300: screen=4 feats=['C2_DEA', 'B10_TAILVOL', 'B12_TAIL15', 'B1_TAIL_10'] valid=1.4018 test=-0.4711
+demean=0 fit=rolling210 eval=350: screen=6 feats=['C2_DEA', 'B10_TAILVOL', 'B1_TAIL_10', 'B9_LOWT', 'D3_TURNCHG', 'B12_TAIL15'] valid=0.3326 test=-0.5415
+demean=0 fit=rolling210 eval=450: screen=6 feats=['C2_DEA', 'B10_TAILVOL', 'E5_DAYNIGHT', 'B1_TAIL_10', 'B12_TAIL15', 'D3_TURNCHG'] valid=-0.7188 test=-0.7105
+  (fit=rolling210 用时 107.8s)
+demean=0 fit=rolling240 eval=all: screen=8 feats=['E5_DAYNIGHT', 'C2_DEA', 'B12_TAIL15', 'B3_SEG_NOON', 'D3_TURNCHG', 'B1_TAIL_10', 'B5_KURT', 'B10_TAILVOL'] valid=-1.8944 test=-0.3115
+demean=0 fit=rolling240 eval=150: screen=7 feats=['B12_TAIL15', 'B3_SEG_NOON', 'C1_DIF', 'B1_TAIL_10', 'E4_GAP', 'B6_VMOM2', 'B9_HIGHT'] valid=-0.8514 test=0.2376
+demean=0 fit=rolling240 eval=200: screen=9 feats=['B12_TAIL15', 'A5_MMS', 'B1_TAIL_10', 'B10_TAILVOL', 'B3_SEG_NOON', 'B3_SEG_OPEN30', 'E4_GAP', 'D3_TURNCHG', 'B6_VMOM4'] valid=-1.4196 test=-0.1478
+demean=0 fit=rolling240 eval=250: screen=5 feats=['C2_DEA', 'B12_TAIL15', 'D3_TURNCHG', 'B1_TAIL_10', 'B8_PVCORR'] valid=1.3223 test=-0.4110
+demean=0 fit=rolling240 eval=300: screen=3 feats=['B12_TAIL15', 'C2_DEA', 'B8_PVCORR'] valid=1.2476 test=0.0389
+demean=0 fit=rolling240 eval=350: screen=6 feats=['C2_DEA', 'E5_DAYNIGHT', 'B1_TAIL_10', 'B12_TAIL15', 'D3_TURNCHG', 'B3_SEG_NOON'] valid=-1.0204 test=-0.1466
+demean=0 fit=rolling240 eval=450: screen=6 feats=['E5_DAYNIGHT', 'C2_DEA', 'B12_TAIL15', 'B3_SEG_NOON', 'D3_TURNCHG', 'B10_TAILVOL'] valid=-1.0065 test=-0.0053
+  (fit=rolling240 用时 109.8s)
+demean=0 fit=rolling280 eval=all: screen=6 feats=['B3_SEG_OPEN30', 'A5_MMS', 'B12_TAIL15', 'B3_SEG_NOON', 'B6_VMOM3', 'B5_KURT'] valid=-2.3539 test=0.1739
+demean=0 fit=rolling280 eval=150: screen=6 feats=['B12_TAIL15', 'A5_MMS', 'B3_SEG_NOON', 'E1_NRET', 'E4_GAP', 'D1_VOLQ_120'] valid=-0.4629 test=0.5329
+demean=0 fit=rolling280 eval=200: screen=10 feats=['B12_TAIL15', 'B4_RVUP', 'A1_MOM_5', 'B1_TAIL_10', 'B3_SEG_NOON', 'B3_SEG_OPEN30', 'B6_VMOM4', 'E4_GAP', 'B10_TAILVOL', 'B5_KURT'] valid=-0.7381 test=-0.1751
+demean=0 fit=rolling280 eval=250: screen=3 feats=['C2_DEA', 'B12_TAIL15', 'B8_PVCORR'] valid=1.2476 test=0.0389
+demean=0 fit=rolling280 eval=300: screen=1 feats=['B12_TAIL15'] valid=-0.1274 test=0.4917
+demean=0 fit=rolling280 eval=350: screen=2 feats=['B3_SEG_OPEN30', 'A5_MMS'] valid=-0.3907 test=-0.1664
+demean=0 fit=rolling280 eval=450: screen=3 feats=['B3_SEG_OPEN30', 'B12_TAIL15', 'A5_MMS'] valid=-0.3347 test=0.1791
+  (fit=rolling280 用时 109.3s)
+demean=0 fit=rolling320 eval=all: screen=5 feats=['B3_SEG_OPEN30', 'B6_VMOM3', 'B3_SEG_NOON', 'B4_RVDN', 'B12_TAIL15'] valid=-0.8520 test=0.1708
+demean=0 fit=rolling320 eval=150: screen=7 feats=['B12_TAIL15', 'B4_RVDN', 'B3_SEG_NOON', 'B6_VMOM3', 'E4_GAP', 'C3_HIST', 'E1_NRET'] valid=-0.5577 test=0.1164
+demean=0 fit=rolling320 eval=200: screen=8 feats=['B12_TAIL15', 'B4_RVUP', 'C14_STREAK', 'C3_HIST', 'E3_NSHARE', 'B6_VMOM4', 'B8_PVCORR', 'B3_SEG_NOON'] valid=0.7645 test=0.3130
+demean=0 fit=rolling320 eval=250: screen=3 feats=['B8_PVCORR', 'A1_MOM_20', 'B6_VMOM3'] valid=0.2991 test=0.1925
+demean=0 fit=rolling320 eval=300: screen=0 feats=[] valid=-3.4608 test=0.4546
+demean=0 fit=rolling320 eval=350: screen=2 feats=['B4_RVDN', 'B6_VMOM3'] valid=0.4279 test=-0.4102
+demean=0 fit=rolling320 eval=450: screen=4 feats=['B4_RVDN', 'B3_SEG_OPEN30', 'B6_VMOM3', 'B3_SEG_NOON'] valid=-0.8942 test=-0.0968
+  (fit=rolling320 用时 100.2s)
+demean=0 fit=rolling360 eval=all: screen=6 feats=['B3_SEG_AM', 'B3_SEG_NOON', 'B6_VMOM3', 'C9_ATR14', 'D3_TURNCHG', 'B5_KURT'] valid=-2.5877 test=-0.2566
+demean=0 fit=rolling360 eval=150: screen=7 feats=['B12_TAIL15', 'B3_SEG_NOON', 'A5_MMS', 'B3_SEG_PM', 'E1_NRET', 'B10_TAILVOL', 'E4_GAP'] valid=-1.2570 test=-0.0769
+demean=0 fit=rolling360 eval=200: screen=4 feats=['B12_TAIL15', 'B4_RVDN', 'B8_PVCORR', 'B3_SEG_NOON'] valid=0.2211 test=0.1546
+demean=0 fit=rolling360 eval=250: screen=2 feats=['B8_PVCORR', 'A1_MOM_5'] valid=0.5672 test=0.5067
+demean=0 fit=rolling360 eval=300: screen=1 feats=['B4_RVDN'] valid=0.5968 test=-0.4078
+demean=0 fit=rolling360 eval=350: screen=2 feats=['B4_RVDN', 'B3_SEG_NOON'] valid=-0.5298 test=-0.0171
+demean=0 fit=rolling360 eval=450: screen=3 feats=['B4_RVDN', 'B3_SEG_NOON', 'B3_SEG_OPEN30'] valid=-0.7191 test=-0.1141
+  (fit=rolling360 用时 109.9s)
+demean=1 fit=expanding eval=all: screen=4 feats=['B4_RVDN', 'B3_SEG_NOON', 'B5_KURT', 'B9_HIGHT'] valid=-1.5988 test=-0.1228
+demean=1 fit=expanding eval=150: screen=5 feats=['B4_RVUP', 'B1_TAIL_10', 'B3_SEG_NOON', 'C10_MADEV_10', 'B10_TAILVOL'] valid=-0.0685 test=-0.4292
+demean=1 fit=expanding eval=200: screen=6 feats=['B4_RV', 'B1_TAIL_10', 'B8_PVCORR', 'B3_SEG_NOON', 'C3_HIST', 'B6_VMOM4'] valid=0.3311 test=-0.3764
+demean=1 fit=expanding eval=250: screen=5 feats=['B4_RVDN', 'B1_TAIL_10', 'B8_PVCORR', 'B3_SEG_NOON', 'B5_KURT'] valid=-0.3952 test=-0.1770
+demean=1 fit=expanding eval=300: screen=5 feats=['B4_RVDN', 'B8_PVCORR', 'B3_SEG_NOON', 'B3_SEG_PM', 'B5_KURT'] valid=-0.5145 test=0.0940
+demean=1 fit=expanding eval=350: screen=6 feats=['B4_RVDN', 'B3_SEG_NOON', 'B8_PVCORR', 'B5_KURT', 'B3_SEG_PM', 'D3_TURNCHG'] valid=-0.6189 test=-0.0319
+demean=1 fit=expanding eval=450: screen=5 feats=['B4_RVDN', 'B3_SEG_NOON', 'B5_KURT', 'E5_DAYNIGHT', 'C3_HIST'] valid=-1.4607 test=-0.1520
+  (fit=expanding 用时 115.3s)
+demean=1 fit=rolling100 eval=all: screen=0 feats=[] valid=-3.4608 test=0.4546
+demean=1 fit=rolling100 eval=150: screen=0 feats=[] valid=-3.4608 test=0.4546
+demean=1 fit=rolling100 eval=200: screen=0 feats=[] valid=-3.4608 test=0.4546
+demean=1 fit=rolling100 eval=250: screen=0 feats=[] valid=-3.4608 test=0.4546
+demean=1 fit=rolling100 eval=300: screen=0 feats=[] valid=-3.4608 test=0.4546
+demean=1 fit=rolling100 eval=350: screen=0 feats=[] valid=-3.4608 test=0.4546
+demean=1 fit=rolling100 eval=450: screen=0 feats=[] valid=-3.4608 test=0.4546
+  (fit=rolling100 用时 30.3s)
+demean=1 fit=rolling130 eval=all: screen=5 feats=['C2_DEA', 'B11_CLOSESETTLE', 'B8_PVCORR', 'B1_TAIL_10', 'B3_SEG_NOON'] valid=0.6606 test=0.0983
+demean=1 fit=rolling130 eval=150: screen=4 feats=['B4_RV', 'B12_TAIL15', 'B1_TAIL_10', 'B3_SEG_NOON'] valid=-0.0124 test=-0.0512
+demean=1 fit=rolling130 eval=200: screen=5 feats=['B4_RVDN', 'B12_TAIL15', 'B1_TAIL_10', 'B8_PVCORR', 'B10_TAILVOL'] valid=1.4621 test=-0.6523
+demean=1 fit=rolling130 eval=250: screen=4 feats=['C2_DEA', 'B8_PVCORR', 'B12_TAIL15', 'B1_TAIL_10'] valid=1.5160 test=-0.3111
+demean=1 fit=rolling130 eval=300: screen=5 feats=['C2_DEA', 'B8_PVCORR', 'B12_TAIL15', 'B1_TAIL_10', 'B3_SEG_NOON'] valid=0.7202 test=0.0753
+demean=1 fit=rolling130 eval=350: screen=5 feats=['C2_DEA', 'B8_PVCORR', 'B12_TAIL15', 'B1_TAIL_10', 'B3_SEG_NOON'] valid=0.7202 test=0.0753
+demean=1 fit=rolling130 eval=450: screen=5 feats=['C2_DEA', 'B11_CLOSESETTLE', 'B8_PVCORR', 'B1_TAIL_10', 'B3_SEG_NOON'] valid=0.6606 test=0.0983
+  (fit=rolling130 用时 116.8s)
+demean=1 fit=rolling160 eval=all: screen=6 feats=['C2_DEA', 'B3_SEG_NOON', 'B9_LOWT', 'B12_TAIL15', 'A2_MOMVWAP_5', 'B1_TAIL_10'] valid=-0.5088 test=0.0629
+demean=1 fit=rolling160 eval=150: screen=5 feats=['B4_RV', 'B3_SEG_PM', 'B12_TAIL15', 'B3_SEG_NOON', 'E1_NRET'] valid=-0.0012 test=-0.1092
+demean=1 fit=rolling160 eval=200: screen=5 feats=['B4_RV', 'B12_TAIL15', 'B1_TAIL_10', 'B8_PVCORR', 'C7_J'] valid=1.4768 test=-0.5341
+demean=1 fit=rolling160 eval=250: screen=6 feats=['C2_DEA', 'B8_PVCORR', 'C7_J', 'B11_CLOSESETTLE', 'B3_SEG_NOON', 'B1_TAIL_5'] valid=0.7093 test=0.1293
+demean=1 fit=rolling160 eval=300: screen=6 feats=['B8_PVCORR', 'C2_DEA', 'B3_SEG_NOON', 'B12_TAIL15', 'A1_MOM_5', 'B1_TAIL_5'] valid=0.7375 test=0.3481
+demean=1 fit=rolling160 eval=350: screen=5 feats=['C2_DEA', 'B8_PVCORR', 'B3_SEG_NOON', 'B12_TAIL15', 'A1_MOM_5'] valid=0.5680 test=0.3584
+demean=1 fit=rolling160 eval=450: screen=6 feats=['C2_DEA', 'B11_CLOSESETTLE', 'B9_LOWT', 'B3_SEG_NOON', 'A2_MOMVWAP_5', 'B1_TAIL_10'] valid=-0.5558 test=0.3036
+  (fit=rolling160 用时 119.4s)
+demean=1 fit=rolling190 eval=all: screen=5 feats=['C2_DEA', 'B3_SEG_NOON', 'B8_PVCORR', 'B1_TAIL_10', 'B12_TAIL15'] valid=0.7202 test=0.0753
+demean=1 fit=rolling190 eval=150: screen=6 feats=['B4_RVUP', 'B1_TAIL_10', 'B12_TAIL15', 'B3_SEG_NOON', 'C10_MADEV_10', 'B3_SEG_OPEN30'] valid=0.0257 test=-0.2689
+demean=1 fit=rolling190 eval=200: screen=4 feats=['B4_RVDN', 'B12_TAIL15', 'B1_TAIL_10', 'B8_PVCORR'] valid=1.3978 test=-0.5892
+demean=1 fit=rolling190 eval=250: screen=5 feats=['C2_DEA', 'B8_PVCORR', 'B1_TAIL_10', 'B3_SEG_NOON', 'B12_TAIL15'] valid=0.7202 test=0.0753
+demean=1 fit=rolling190 eval=300: screen=5 feats=['B8_PVCORR', 'C2_DEA', 'B3_SEG_NOON', 'B12_TAIL15', 'B1_TAIL_5'] valid=0.8805 test=0.1980
+demean=1 fit=rolling190 eval=350: screen=5 feats=['C2_DEA', 'B8_PVCORR', 'B3_SEG_NOON', 'B1_TAIL_10', 'B12_TAIL15'] valid=0.7202 test=0.0753
+demean=1 fit=rolling190 eval=450: screen=5 feats=['C2_DEA', 'E5_DAYNIGHT', 'B3_SEG_NOON', 'B1_TAIL_10', 'B11_CLOSESETTLE'] valid=-1.0157 test=0.3004
+  (fit=rolling190 用时 111.2s)
+demean=1 fit=rolling210 eval=all: screen=7 feats=['C2_DEA', 'B9_HIGHT', 'B3_SEG_NOON', 'B5_KURT', 'B10_TAILVOL', 'B1_TAIL_10', 'B11_CLOSESETTLE'] valid=-1.3824 test=0.0117
+demean=1 fit=rolling210 eval=150: screen=6 feats=['B4_RV', 'B9_HIGHT', 'B1_TAIL_10', 'B12_TAIL15', 'B3_SEG_NOON', 'C3_HIST'] valid=-0.0298 test=-0.3364
+demean=1 fit=rolling210 eval=200: screen=7 feats=['B4_RV', 'B12_TAIL15', 'B1_TAIL_10', 'B9_HIGHT', 'C3_HIST', 'B10_TAILVOL', 'B3_SEG_NOON'] valid=-0.0281 test=-0.3860
+demean=1 fit=rolling210 eval=250: screen=7 feats=['C2_DEA', 'B8_PVCORR', 'B1_TAIL_5', 'B5_KURT', 'B12_TAIL15', 'B10_TAILVOL', 'B3_SEG_NOON'] valid=-0.0372 test=0.1379
+demean=1 fit=rolling210 eval=300: screen=6 feats=['B8_PVCORR', 'C2_DEA', 'B1_TAIL_5', 'B3_SEG_NOON', 'B10_TAILVOL', 'B5_KURT'] valid=0.0589 test=0.1157
+demean=1 fit=rolling210 eval=350: screen=6 feats=['C2_DEA', 'B8_PVCORR', 'B1_TAIL_5', 'B3_SEG_NOON', 'B10_TAILVOL', 'B5_KURT'] valid=0.0589 test=0.1157
+demean=1 fit=rolling210 eval=450: screen=7 feats=['C2_DEA', 'B9_HIGHT', 'B5_KURT', 'B1_TAIL_5', 'B3_SEG_NOON', 'B10_TAILVOL', 'B11_CLOSESETTLE'] valid=-1.3286 test=0.0060
+  (fit=rolling210 用时 112.6s)
+demean=1 fit=rolling240 eval=all: screen=5 feats=['C2_DEA', 'B3_SEG_NOON', 'B9_LOWT', 'B1_TAIL_10', 'B5_KURT'] valid=-1.4765 test=-0.2230
+demean=1 fit=rolling240 eval=150: screen=5 feats=['B4_RV', 'B1_TAIL_10', 'B12_TAIL15', 'B3_SEG_NOON', 'C7_J'] valid=0.3538 test=-0.1328
+demean=1 fit=rolling240 eval=200: screen=6 feats=['B4_RVDN', 'B1_TAIL_10', 'B12_TAIL15', 'B8_PVCORR', 'C3_HIST', 'B3_SEG_NOON'] valid=0.5492 test=-0.2411
+demean=1 fit=rolling240 eval=250: screen=4 feats=['C2_DEA', 'B8_PVCORR', 'B1_TAIL_10', 'B3_SEG_NOON'] valid=0.7143 test=0.0912
+demean=1 fit=rolling240 eval=300: screen=4 feats=['B8_PVCORR', 'C2_DEA', 'B3_SEG_NOON', 'B1_TAIL_5'] valid=0.8981 test=0.1915
+demean=1 fit=rolling240 eval=350: screen=5 feats=['B8_PVCORR', 'C2_DEA', 'B3_SEG_NOON', 'B1_TAIL_10', 'B5_KURT'] valid=-0.0318 test=0.0799
+demean=1 fit=rolling240 eval=450: screen=5 feats=['C2_DEA', 'E5_DAYNIGHT', 'B3_SEG_NOON', 'C14_STREAK', 'B5_KURT'] valid=-1.7887 test=-0.0485
+  (fit=rolling240 用时 115.6s)
+demean=1 fit=rolling280 eval=all: screen=5 feats=['B12_TAIL15', 'A3_TS_60', 'B3_SEG_AM', 'B3_SEG_NOON', 'B5_KURT'] valid=-2.0619 test=0.1879
+demean=1 fit=rolling280 eval=150: screen=5 feats=['B4_RV', 'B12_TAIL15', 'B3_SEG_NOON', 'B1_TAIL_5', 'C7_J'] valid=0.4250 test=-0.0305
+demean=1 fit=rolling280 eval=200: screen=5 feats=['B4_RV', 'B12_TAIL15', 'B8_PVCORR', 'C3_HIST', 'B3_SEG_NOON'] valid=0.6351 test=0.0344
+demean=1 fit=rolling280 eval=250: screen=4 feats=['C2_DEA', 'B8_PVCORR', 'B12_TAIL15', 'B3_SEG_NOON'] valid=0.5122 test=0.3760
+demean=1 fit=rolling280 eval=300: screen=4 feats=['B8_PVCORR', 'B12_TAIL15', 'B3_SEG_NOON', 'C2_DEA'] valid=0.5122 test=0.3760
+demean=1 fit=rolling280 eval=350: screen=6 feats=['B12_TAIL15', 'B8_PVCORR', 'B4_RVDN', 'B3_SEG_NOON', 'D3_TURNCHG', 'B5_KURT'] valid=-0.7310 test=0.1360
+demean=1 fit=rolling280 eval=450: screen=5 feats=['B12_TAIL15', 'B9_LOWT', 'A3_TS_60', 'B3_SEG_NOON', 'B5_KURT'] valid=-1.4862 test=0.2376
+  (fit=rolling280 用时 111.2s)
+demean=1 fit=rolling320 eval=all: screen=6 feats=['C2_DEA', 'B3_SEG_NOON', 'B9_LOWT', 'B6_VMOM4', 'B5_KURT', 'B12_TAIL15'] valid=-1.5549 test=0.1179
+demean=1 fit=rolling320 eval=150: screen=6 feats=['B4_RV', 'B12_TAIL15', 'B3_SEG_NOON', 'B1_TAIL_10', 'B6_VMOM4', 'A1_MOM_5'] valid=0.2783 test=0.0576
+demean=1 fit=rolling320 eval=200: screen=6 feats=['B12_TAIL15', 'B4_RV', 'B8_PVCORR', 'A1_MOM_5', 'B3_SEG_NOON', 'B1_TAIL_5'] valid=0.8964 test=0.0666
+demean=1 fit=rolling320 eval=250: screen=6 feats=['B8_PVCORR', 'C2_DEA', 'B6_VMOM4', 'E1_NRET', 'B3_SEG_NOON', 'B5_KURT'] valid=-0.8707 test=0.2001
+demean=1 fit=rolling320 eval=300: screen=7 feats=['B8_PVCORR', 'B6_VMOM4', 'B4_RVDN', 'B3_SEG_NOON', 'E1_NRET', 'B12_TAIL15', 'B5_KURT'] valid=-0.9603 test=0.1362
+demean=1 fit=rolling320 eval=350: screen=7 feats=['B6_VMOM4', 'B4_RVDN', 'B8_PVCORR', 'B3_SEG_NOON', 'E1_NRET', 'B5_KURT', 'B12_TAIL15'] valid=-0.9603 test=0.1362
+demean=1 fit=rolling320 eval=450: screen=7 feats=['B4_RVDN', 'B6_VMOM4', 'B3_SEG_NOON', 'E5_DAYNIGHT', 'B5_KURT', 'B12_TAIL15', 'C3_HIST'] valid=-1.5699 test=0.0837
+  (fit=rolling320 用时 115.3s)
+demean=1 fit=rolling360 eval=all: screen=5 feats=['B4_RVDN', 'B3_SEG_NOON', 'B5_KURT', 'C3_HIST', 'B9_HIGHT'] valid=-1.3737 test=-0.2168
+demean=1 fit=rolling360 eval=150: screen=6 feats=['B4_RV', 'B12_TAIL15', 'B3_SEG_PM', 'B3_SEG_NOON', 'E1_NRET', 'C3_HIST'] valid=0.2070 test=-0.1222
+demean=1 fit=rolling360 eval=200: screen=5 feats=['B4_RV', 'B12_TAIL15', 'B8_PVCORR', 'B3_SEG_NOON', 'C3_HIST'] valid=0.6351 test=0.0344
+demean=1 fit=rolling360 eval=250: screen=5 feats=['A1_MOM_5', 'B8_PVCORR', 'B4_RV', 'B5_KURT', 'B3_SEG_NOON'] valid=-0.1908 test=0.1831
+demean=1 fit=rolling360 eval=300: screen=6 feats=['B4_RVDN', 'B8_PVCORR', 'B3_SEG_NOON', 'C3_HIST', 'B5_KURT', 'E1_NRET'] valid=-1.0873 test=-0.1475
+demean=1 fit=rolling360 eval=350: screen=6 feats=['B4_RVDN', 'B3_SEG_NOON', 'B5_KURT', 'C3_HIST', 'E5_DAYNIGHT', 'D3_TURNCHG'] valid=-1.5844 test=-0.2427
+demean=1 fit=rolling360 eval=450: screen=5 feats=['B4_RVDN', 'B5_KURT', 'B3_SEG_NOON', 'C3_HIST', 'E5_DAYNIGHT'] valid=-1.4607 test=-0.1520
+  (fit=rolling360 用时 114.4s)
+
+=== 汇总（有效行：至少选入 1 个因子；按测试期 Sharpe 排序，前 10） ===
+ demean fit_window eval_window  n_screened  valid_sharpe  test_sharpe
+      0 rolling280         150           6       -0.4629       0.5329
+      0 rolling360         250           2        0.5672       0.5067
+      0 rolling280         300           1       -0.1274       0.4917
+      1 rolling280         300           4        0.5122       0.3760
+      1 rolling280         250           4        0.5122       0.3760
+      1 rolling160         350           5        0.5680       0.3584
+      1 rolling160         300           6        0.7375       0.3481
+      0 rolling190         200           7       -1.1121       0.3453
+      0 rolling320         200           8        0.7645       0.3130
+      1 rolling160         450           6       -0.5558       0.3036
+
+=== 主结果登记口径（demean=0, expanding, all） ===
+ n_screened                        features  valid_sharpe  test_sharpe
+          3 B4_RVDN;B3_SEG_NOON;E5_DAYNIGHT       -0.8573      -0.0212
+
+共 140 组；其中退化行（筛选无因子入选）15 组，不参与统计
+有效行 125 组：测试期 Sharpe 为正的有 56 组，验证期与测试期同时为正的有 29 组
+有效行的测试期 Sharpe：最大 0.5329 / 中位 -0.0212 / 最小 -0.8695
+wrote sgp_factors/out/window_sensitivity.csv

@@ -1,0 +1,31 @@
+                                       0                       1
+version                     main_ols_exp          ema_halflife_2
+sample_status                 已见样本（非新样本）              已见样本（非新样本）
+n                                     11                      11
+start                         2026-10-01              2026-10-01
+end                           2026-10-15              2026-10-15
+total_return                   -0.015574               -0.009225
+mean_daily                     -0.001378               -0.000823
+std_daily                       0.009692                0.006097
+max_dd                         -0.030261               -0.018745
+win_rate                        0.636364                0.636364
+profit_factor                   0.610877                0.652038
+period_turnover                  6.22444                2.428323
+turnover_per_day                0.565858                0.220757
+gross_sum                      -0.013318               -0.008339
+cost_sum                       -0.001842               -0.000718
+avg_pos                         0.169322                 0.33452
+long_days                              6                       8
+short_days                             5                       3
+flat_days                              0                       0
+cagr              N/A（n=11 < 60，年化无统计意义）  N/A（n=11 < 60，年化无统计意义）
+ann_vol           N/A（n=11 < 60，年化无统计意义）  N/A（n=11 < 60，年化无统计意义）
+sharpe            N/A（n=11 < 60，年化无统计意义）  N/A（n=11 < 60，年化无统计意义）
+calmar            N/A（n=11 < 60，年化无统计意义）  N/A（n=11 < 60，年化无统计意义）
+sortino           N/A（n=11 < 60，年化无统计意义）  N/A（n=11 < 60，年化无统计意义）
+var95                          -0.017775               -0.010777
+cvar95                          -0.02985               -0.018745
+ann_turnover      N/A（n=11 < 60，年化无统计意义）  N/A（n=11 < 60，年化无统计意义）
+annualized                         False                   False
+
+wrote sgp_factors/out/perf_2026-10-01_2026-10-16.csv

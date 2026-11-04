@@ -1,0 +1,16 @@
+[original] 入选特征 ['B7_UDVOL', 'B3_SEG_NOON', 'C9_ATR14']
+  验证 Sharpe=-1.1213  测试 Sharpe=-0.1330  CAGR=-0.0151  maxDD=-0.1533
+wrote ~/Downloads/cn_indexfuture_test/sgp_factors/out/_legacy_original.json
+[b7_only] 入选特征 ['B4_RVDN', 'B3_SEG_NOON', 'B8_PVCORR']
+  验证 Sharpe=+0.0326  测试 Sharpe=+0.1035  CAGR=+0.0052  maxDD=-0.1343
+wrote ~/Downloads/cn_indexfuture_test/sgp_factors/out/_legacy_b7_only.json
+fixed      入选 ['B4_RVDN', 'B3_SEG_NOON', 'E5_DAYNIGHT']
+           验证 Sharpe=-0.8573  测试 Sharpe=-0.0212  CAGR=-0.0053
+
+=== 实现修正对照 ===
+ variant                            features  valid_sharpe  test_sharpe  test_cagr  test_max_dd
+original   [B7_UDVOL, B3_SEG_NOON, C9_ATR14]     -1.121261    -0.132991  -0.015127    -0.153330
+ b7_only   [B4_RVDN, B3_SEG_NOON, B8_PVCORR]      0.032611     0.103506   0.005158    -0.134250
+   fixed [B4_RVDN, B3_SEG_NOON, E5_DAYNIGHT]     -0.857325    -0.021237  -0.005342    -0.168438
+
+wrote sgp_factors/out/version_compare.csv
